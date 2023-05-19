@@ -3,7 +3,7 @@ const { join } = require('node:path')
 module.exports = {
   entry: join(__dirname, './index.tsx'),
   output: {
-    path: join(__dirname, './server/public'),
+    path: join(__dirname, '../public'),
     filename: 'bundle.js',
   },
   mode: 'development',
