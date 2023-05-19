@@ -1,23 +1,21 @@
-const { join } = require('node:path')
+import { join } from 'node:path'
 
-module.exports = {
-  entry: join(__dirname, './index.tsx'),
-  output: {
-    path: join(__dirname, '../server/public'),
-    filename: 'bundle.js',
-  },
-  mode: 'development',
-  module: {
-    rules: [
-      {
-        test: /\.(j|t)sx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-      },
-    ],
-  },
-  resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
-  },
-  devtool: 'source-map',
+export const entry = join(__dirname, './index.tsx')
+export const output = {
+  path: join(__dirname, '../server/public'),
+  filename: 'bundle.js',
 }
+export const mode = 'development'
+export const module = {
+  rules: [
+    {
+      test: /\.(j|t)sx?$/,
+      loader: 'babel-loader',
+      exclude: /node_modules/,
+    },
+  ],
+}
+export const resolve = {
+  extensions: ['.js', '.jsx', '.ts', '.tsx'],
+}
+export const devtool = 'source-map'
