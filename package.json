@@ -6,6 +6,7 @@
   "main": "server/index.js",
   "scripts": {
     "start": "run-p webpack server",
+    "build": "npm run webpack",
     "dev": "run-p client:watch server:watch",
     "webpack": "webpack --config client/webpack.config.js",
     "server": "ts-node server/index.ts",
